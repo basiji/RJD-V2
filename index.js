@@ -12,8 +12,8 @@ connection.connect(function(error){
 });
 
 // Define routers
-var router_v1 = require('./modules/router_v1')(connection);
-var router_v2 = require('./modules/router_v2')(connection);
+var router_v1 = require(__dirname + '/modules/router_v1')(connection);
+var router_v2 = require(__dirname + '/modules/router_v2')(connection);
 
 // Create server
 app.listen(CONSTANTS.PORT, function(){
