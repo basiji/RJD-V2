@@ -1,7 +1,7 @@
 module.exports = function(req, res, connection){
 
     // Recive showId
-    if(!req.query.filte)
+    if(!req.query.filter)
         return res.sendStatus(404);
 
     var filter = req.query.filter;
