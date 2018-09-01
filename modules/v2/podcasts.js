@@ -21,6 +21,9 @@ module.exports = function(req, res, connection){
         case 'likes':
         sql = "SELECT id, title, episode, thumb_path FROM app_podcasts WHERE id IN ('" + req.query.key + "') ORDER BY title DESC";
         break;
+
+        case 'show':
+        sql = "SELECT id, title, episode, thumb_path FROM app_podcasts WHERE showid = '" + req.query.key + "' ORDER BY episode DESC";
         
     }
 

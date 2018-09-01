@@ -8,7 +8,7 @@ module.exports = function(req, res, connection){
         if(error || result.length === 0)
             return res.sendStatus(404);
             
-        return res.json(result);
+        return res.json(result[0]);
     })
 
 }
