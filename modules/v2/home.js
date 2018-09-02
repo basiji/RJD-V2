@@ -7,16 +7,18 @@ module.exports = function (req, res, connection){
 
     var popular;
     var featured;
+
+    var queries = 'id, title, episode, thumb_path, download_path, likes, dislikes, size';
     
 
-    connection.query("SELECT id, title, episode, thumb_path FROM app_podcasts WHERE featured = 1 ORDER BY id DESC LIMIT 10", function (error, result){
+    connection.query("SELECT " + queries + " FROM app_podcasts WHERE featured = 1 ORDER BY id DESC LIMIT 10", function (error, result){
 
         if(error)
         console.log(error);
 
         featured = result;
 
-        connection.query("SELECT id, title, episode, thumb_path FROM app_podcasts WHERE popular = 1 ORDER BY likes DESC LIMIT 10", function(error, result){
+        connection.query("SELECT " + queries + " FROM app_podcasts WHERE popular = 1 ORDER BY likes DESC LIMIT 10", function(error, result){
 
             if(error)
             console.log(error);
