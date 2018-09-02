@@ -8,7 +8,7 @@ module.exports = function (req, res, connection){
     var popular;
     var featured;
 
-    var queries = 'id, title, episode, thumb_path, download_path, likes, dislikes, size';
+    var queries = 'id, title, episode, thumb_path, download_path, likes, dislikes, plays, size';
     
 
     connection.query("SELECT " + queries + " FROM app_podcasts WHERE featured = 1 ORDER BY id DESC LIMIT 10", function (error, result){
