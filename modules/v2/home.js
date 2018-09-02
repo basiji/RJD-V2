@@ -36,7 +36,7 @@ module.exports = function (req, res, connection){
                 featured:featured,
                 popular:popular,
                 shows:result,
-                buildnumber:1,
+                buildnumber:2,
                 update_url:'http://ps4club.ir/RC-4.apk',
             });
 
