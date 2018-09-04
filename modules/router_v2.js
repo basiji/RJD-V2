@@ -43,7 +43,8 @@ module.exports = function(connection){
         // Set cookie
         res.cookie('userid', req.query.userid);
         res.cookie('plan', req.query.plan);
-        res.sendFile(__dirname + '/html/asan/index.html');
+        res.sendFile('../html/ASAN/index.html');
+        
 
     });
 
