@@ -21,7 +21,7 @@ app.listen(CONSTANTS.PORT, function(){
 });
 
 // Serve static resources
-app.use(express.static(__dirname + '/html'));
+app.use(express.static(__dirname + '/html/ASAN'));
 
 // Router versioning
 app.use('/', router_v1);
